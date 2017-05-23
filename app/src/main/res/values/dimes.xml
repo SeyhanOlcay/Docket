@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Toast -->
+    <dimen name="toast_corner_radius">30dp</dimen>
+    <dimen name="toast_height">60dp</dimen>
+    <dimen name="toast_text_size">12sp</dimen>
+    <dimen name="toast_margin">16dp</dimen>
+    <dimen name="toast_margin_vertical">32dp</dimen>
+</resources>

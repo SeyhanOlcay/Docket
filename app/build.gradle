@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+    defaultConfig {
+        applicationId "com.ovidos.docked"
+        minSdkVersion MIN_SDK as int
+        targetSdkVersion TARGET_SDK as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFile 'proguard-gson.pro'
+            proguardFile 'proguard-square-okhttp3.pro'
+            proguardFile 'proguard-square-okio.pro'
+            proguardFile 'proguard-square-retrofit2.pro'
+            proguardFile 'proguard-google-common.pro'
+            proguardFile 'proguard-support-v7-appcompat.pro'
+            proguardFile 'proguard-picasso.pro'
+            proguardFile 'proguard-eventbus.pro'
+            proguardFile 'proguard-butterknife.pro'
+            proguardFile 'proguard-renderscript.pro'
+            proguardFile 'proguard-prettytime.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "${BASE_URL_STG}")
+        }
+        release {
+            minifyEnabled true
+            proguardFile 'proguard-gson.pro'
+            proguardFile 'proguard-square-okhttp3.pro'
+            proguardFile 'proguard-square-okio.pro'
+            proguardFile 'proguard-square-retrofit2.pro'
+            proguardFile 'proguard-google-common.pro'
+            proguardFile 'proguard-support-v7-appcompat.pro'
+            proguardFile 'proguard-picasso.pro'
+            proguardFile 'proguard-eventbus.pro'
+            proguardFile 'proguard-butterknife.pro'
+            proguardFile 'proguard-renderscript.pro'
+            proguardFile 'proguard-prettytime.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "BASE_URL", "${BASE_URL}")
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:design:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:cardview-v7:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:support-v4:${SUPPORT_LIBRARY_VERSION}"
+
+    compile "com.squareup.retrofit2:retrofit:${RETROFIT2_VERSION}"
+    compile "com.squareup.retrofit2:converter-gson:${RETROFIT2_VERSION}"
+    compile "com.squareup.picasso:picasso:${PICASSO_VERSION}"
+
+    compile "com.google.code.gson:gson:${GSON_VERSION}"
+
+    compile "org.greenrobot:eventbus:${EVENTBUS_VERSION}"
+
+    compile "com.jakewharton:butterknife:${BUTTERKNIFE_VERSION}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${BUTTERKNIFE_VERSION}"
+
+    compile "com.nineoldandroids:library:${NINEOLDANDROIDS_VERSION}"
+}

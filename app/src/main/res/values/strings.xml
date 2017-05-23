@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Docket</string>
+    <string name="general_error">Oops! Something went wrong. Please try again later.</string>
+    <string name="internet_error">No Internet Connection!</string>
+</resources>

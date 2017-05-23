@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toastRoot"
+    android:orientation="vertical"
+    android:background="@drawable/toast_shape_error"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/toast_margin_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toast_height">
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/toast_text_size"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/toast_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>
