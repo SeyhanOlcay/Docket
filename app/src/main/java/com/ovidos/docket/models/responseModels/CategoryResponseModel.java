@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 public class CategoryResponseModel extends BaseResponseModel {
 
     @SerializedName("Name")
-    public String name;
+    private String name;
 
     public CategoryResponseModel(String name) {
         this.name = name;

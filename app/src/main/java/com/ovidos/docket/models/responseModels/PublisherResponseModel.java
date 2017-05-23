@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class PublisherResponseModel extends BaseResponseModel {
     @SerializedName("Name")
-    public String name;
+    private String name;
     @SerializedName("LogoUrl")
-    public String logoUrl;
+    private String logoUrl;
 
     public PublisherResponseModel(String name, String logoUrl) {
         this.name = name;

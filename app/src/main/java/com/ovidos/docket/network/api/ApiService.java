@@ -2,6 +2,7 @@ package com.ovidos.docket.network.api;
 
 import com.ovidos.docket.models.responseModels.BaseResponseModel;
 import com.ovidos.docket.models.responseModels.CategoryResponseModel;
+import com.ovidos.docket.models.responseModels.CredentialResponseModel;
 import com.ovidos.docket.models.responseModels.ResponseModel;
 import com.ovidos.docket.models.responseModels.RssChannelResponseModel;
 import com.ovidos.docket.models.responseModels.RssItemResponseModel;
@@ -10,6 +11,8 @@ import com.ovidos.docket.models.responseModels.UserResponseModel;
 
 import retrofit2.Call;
 import retrofit2.http.DELETE;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -21,6 +24,15 @@ import retrofit2.http.Query;
 
 public interface ApiService {
 
+    //region Account
+
+    @FormUrlEncoded
+    @POST("token")
+    Call<CredentialResponseModel> getToken(@Field("username") String username,
+                                           @Field("password") String password,
+                                           @Field("grant_type") String grantType);
+
+    //endregion
 
     //region ApplicationUsers
 

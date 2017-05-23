@@ -5,8 +5,6 @@ import android.app.Application;
 import com.ovidos.docket.network.api.ApiClient;
 import com.ovidos.docket.network.api.ApiService;
 
-import java.util.Locale;
-
 /**
  * Created by omral on 11.05.2017.
  */
@@ -17,7 +15,6 @@ public class DocketApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Locale.setDefault(Locale.ENGLISH);
         refreshApiService();
     }
 

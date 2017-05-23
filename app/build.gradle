@@ -4,7 +4,7 @@ android {
     compileSdkVersion COMPILE_SDK_VERSION as int
     buildToolsVersion BUILD_TOOLS_VERSION
     defaultConfig {
-        applicationId "com.ovidos.docked"
+        applicationId "com.ovidos.docket"
         minSdkVersion MIN_SDK as int
         targetSdkVersion TARGET_SDK as int
         versionCode VERSION_CODE as int

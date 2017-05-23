@@ -11,35 +11,35 @@ import java.util.Date;
 public class RssItemSimpleResponseModel extends BaseResponseModel {
 
     @SerializedName("CreateDate")
-    public Date createDate;
+    private Date createDate;
     @SerializedName("Title")
-    public String title;
+    private String title;
     @SerializedName("Description")
-    public String description;
+    private String description;
     @SerializedName("ImageUrl")
-    public String imageUrl;
+    private String imageUrl;
     @SerializedName("Url")
-    public String url;
+    private String url;
     @SerializedName("PublisherName")
-    public String publisherName;
+    private String publisherName;
     @SerializedName("PublisherLogoUrl")
-    public String publisherLogoUrl;
+    private String publisherLogoUrl;
     @SerializedName("IsLiked")
-    public boolean isLiked;
+    private boolean isLiked;
     @SerializedName("IsUnliked")
-    public boolean isUnliked;
+    private boolean isUnliked;
     @SerializedName("IsRead")
-    public boolean isRead;
+    private boolean isRead;
     @SerializedName("IsSaved")
-    public boolean isSaved;
+    private boolean isSaved;
     @SerializedName("LikeCount")
-    public int likeCount;
+    private int likeCount;
     @SerializedName("ReadCount")
-    public int readCount;
+    private int readCount;
     @SerializedName("UnLikeCount")
-    public int unlikeCount;
+    private int unlikeCount;
     @SerializedName("SaveCount")
-    public int saveCount;
+    private int saveCount;
 
     public Date getCreateDate() {
         return createDate;

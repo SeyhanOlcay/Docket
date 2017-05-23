@@ -43,7 +43,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private void setup(){
         mApiService = ((DocketApplication) getApplication()).getApiService();
-        EventBus.getDefault().register(this);
+        //EventBus.getDefault().register(this);
     }
 
     protected void generalFailureHandler(String tag, Throwable t) {
