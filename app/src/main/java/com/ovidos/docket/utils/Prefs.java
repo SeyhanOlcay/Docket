@@ -11,6 +11,7 @@ public class Prefs {
 
     private static final String TOKEN = "com.ovidos.docket.token";
     private static final String PREFS = "com.ovidos.docket.prefs";
+    private static final String NOTIFICATION_STATUS = "com.ovidos.muhip.notification_status";
 
     public static void setToken(Context context, String token) {
         SharedPreferences.Editor editor = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit();
@@ -23,5 +24,14 @@ public class Prefs {
         }
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE);
         return sharedPreferences.getString(TOKEN, null);
+    }
+
+    public static boolean getNotificationStatus(Context context) {
+        return context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).getBoolean(NOTIFICATION_STATUS, false);
+    }
+
+    public static void setNotificationStatus(Context context, boolean status){
+        SharedPreferences.Editor editor = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit();
+        editor.putBoolean(NOTIFICATION_STATUS, status).apply();
     }
 }
