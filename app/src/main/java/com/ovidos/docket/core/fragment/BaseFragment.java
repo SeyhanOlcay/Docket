@@ -35,7 +35,6 @@ public class BaseFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EventBus.getDefault().register(this);
         mApiService = ((BaseActivity) getActivity()).getApiService();
     }
 
